@@ -1,0 +1,75 @@
+Select * from customer;
+
+select FIRST_NAME, LAST_NAME, COUNTRY
+from customer;
+
+select first_name as name, LAST_NAME as family_name, COUNTRY as country
+from customer;
+
+select first_name, country, credit_limit
+from customer
+limit 10;
+
+select first_name, last_name, country 
+from customer
+limit 1, 2;
+
+select * 
+from customer
+where country = 'USA';
+
+
+select * 
+from customer
+where country = 'USA' or country = 'India';
+
+
+select * 
+from customer
+where credit_limit < 5000000;
+
+select * 
+from customer
+where credit_limit < 5000000 and country = 'USA';
+
+
+select first_name, last_name, credit_limit
+from customer
+where credit_limit < 5000000 and country = 'USA';
+
+
+
+select first_name, last_name, credit_limit
+from customer
+order by credit_limit desc;
+
+
+
+select first_name, last_name, credit_limit
+from customer
+where country = 'USA' or country = 'India'
+order by credit_limit desc;
+
+
+select first_name, last_name, credit_limit
+from customer
+where country in ('USA', 'India', 'France')
+order by credit_limit desc;
+
+
+select first_name, country, credit_limit
+from customer
+where country like 'U%';
+
+select first_name, country, credit_limit
+from customer
+where country like '%a';
+
+
+select first_name, country, credit_limit
+from customer
+where country like 'a%a';
+
+
+
+

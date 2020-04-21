@@ -1,0 +1,15 @@
+1. Display the top 20 rows In the employee table 
+
+2. Filter all the employees which are in the age group 20-30
+
+3. Show all the data from employees who are from Arizona, California, Texas or New Mexico
+
+4. Are there any employees who are from Florida 
+
+5. Select the top 3 employees with the highest salary 
+
+6. Who is/are the youngest employees in the company 
+
+7. Is Sam still working in the company 
+
+8. Who is the most senior employee in the company
