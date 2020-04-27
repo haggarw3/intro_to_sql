@@ -1,0 +1,94 @@
+# more into how to use the where clause
+
+# select * from customer 
+# where first_name like '%d';
+
+
+# select first_name, last_name
+# from customer where first_name like '%d';
+
+
+# select lower(first_name) from customer 
+# where first_name like '%d';
+
+
+# select upper(first_name) from customer 
+# where first_name like '%d';
+
+# select substring(country,1,3)
+# from customer;
+
+# now if we want to standardize the result 
+# select upper(substring(country,1,3))
+# from customer;
+
+# select concat(first_name,' ', last_name)
+# from customer;
+
+# some other functions
+# LTRIM - remove all leading space from the left
+# RTRIM - remove all leading space from the right
+# TRIM - remove all unwanted characters from a string
+# LENGTH - get the length of the string
+# REPLACE - search a substring and replace it with another substring in a string
+# FORMAT - Round to fixed number of decimal places
+
+
+# select trim(first_name)
+# from customer
+
+# select replace(country, 'ndia','NDIA')
+# from customer
+
+
+
+
+
+
+# group by & aggregations 
+# select country, avg(credit_limit) from customer
+# group by country;
+
+# select country, format(avg(credit_limit),2) from customer
+# group by country;
+
+
+# other aggregate functions include sum, min, max, count 
+
+
+# select country, min(credit_limit) from customer
+# group by country;
+
+
+# select country, max(credit_limit) from customer
+# group by country;
+
+
+# select country, max(credit_limit) as MAXI 
+# from customer
+# group by country
+# order by MAXI desc;
+
+
+
+# check how many different countries are represented in the data
+
+# select count (distinct country)
+# from customer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

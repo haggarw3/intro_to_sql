@@ -1,0 +1,19 @@
+
+
+# what are the highest salaries in each of the states
+
+# Give the names of the employees with the highest salary in each state. 
+# Arrange the names in an ascending order
+
+
+# For how many states , do we have the data available 
+
+# what is the average age of employees in the company 
+
+# what is the average age of employees in each state
+
+
+# what is the average salary in Florida 
+
+
+# What is the second highest salary for Florida 
