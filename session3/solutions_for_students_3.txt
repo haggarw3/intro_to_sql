@@ -1,0 +1,72 @@
+
+Use the customers table from order entry schema to find how many customers are there that have a credit limit over $1000
+
+
+Use the orders table from order entry schema to find how many orders were made
+using direct mode of shopping and how many orders were made using online mode of shopping
+
+
+
+Give the total order value for each customer whose orders have been delivered. Please note that the order status is 10 when the order has been delivered to the customers
+
+
+
+
+
+For customers whose orders are still pending, give the following details: order date, order mode, customer first name, customer last name, order status and order total. Please note that you will have to create a join between orders table and customers table
+
+
+select o.order_date, o.order_mode, o.order_status, o.order_total, 
+c.cust_first_name, c.cust_last_name
+from oe.orders o
+join oe.customers c
+on o.customer_id = c.customer_id
+where o.order_status < 10;
+
+
+
+
+OBSERVE THE CHANGES
+
+select sum(o.order_total) as Total,
+c.cust_first_name, c.cust_last_name
+from oe.orders o
+join oe.customers c
+on o.customer_id = c.customer_id
+where o.order_status < 10
+group by c.cust_first_name, c.cust_last_name;
+
+
+
+
+select sum(o.order_total) as Total,
+c.cust_first_name, c.cust_last_name
+from oe.orders o
+join oe.customers c
+on o.customer_id = c.customer_id
+where o.order_status < 10
+group by c.cust_first_name, c.cust_last_name
+having sum(o.order_total) >20000;
+
+
+Then at the end you can also add an order by clause
+
+
+
+
+
+
+
+
+Using the orders item table, find the total value for each product ID. 
+Total value can be calculated as the sum of quantity * unit value 
+
+
+-- select product_id, unit_price, sum(quantity)
+-- from oe.order_items oi
+-- group by product_id, unit_price
+
+
+select product_id, unit_price*sum(quantity) as Total
+from oe.order_items oi
+group by product_id, unit_price

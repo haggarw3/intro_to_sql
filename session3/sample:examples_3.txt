@@ -1,0 +1,71 @@
+select * from scott.emp
+fetch next 4 rows only;
+
+select * from scott.dept
+fetch next 4 rows only;
+
+
+select e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, 
+e.comm, e.deptno
+from scott.emp e;
+
+
+select e.empno Emp_number, e.ename Name, e.job, e.mgr Code, e.hiredate,
+e.sal Salary, e.comm, e.deptno
+from scott.emp e;
+
+Examples on Join statements - SCOTT SCHEMA
+
+select *
+from scott.emp e
+left join scott.dept d 
+on e.deptno = d.deptno;
+
+
+select e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, 
+e.comm, e.deptno, d.dname, d.loc
+from scott.emp e
+left join scott.dept d 
+on e.deptno = d.deptno;
+
+
+
+select e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, 
+e.comm, e.deptno, d.dname, d.loc
+from scott.emp e
+right join scott.dept d 
+on e.deptno = d.deptno;
+
+
+Common table expressions:
+
+with CTE_join as 
+(
+select e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, 
+e.comm, e.deptno, d.dname, d.loc
+from scott.emp e
+left join scott.dept d 
+on e.deptno = d.deptno
+)
+select * from CTE_join;
+
+
+
+Examples on Join statements - ORDER ENTRY SCHEMA
+
+
+Select * from oe.orders;
+
+Select * from oe.customers;
+
+select * from oe.orders o
+join oe.customers c
+on o.customer_id = c.customer_id;
+
+
+
+
+
+
+
+
