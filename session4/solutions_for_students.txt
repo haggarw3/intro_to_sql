@@ -1,0 +1,51 @@
+
+
+
+
+select *
+from scott.emp e
+where e.mgr is not null;
+
+
+select *
+from scott.emp e
+where e.mgr is not null
+order by e.sal desc
+fetch next 3 rows only;
+
+
+
+select *
+from scott.emp e
+where e.mgr is not null
+order by e.sal asc
+offset 4 rows 
+fetch next 1 rows only;
+
+
+
+
+select round(avg(e.sal),2) Average_salary, d.dname, d.loc
+from scott.emp e
+right join scott.dept d 
+on e.deptno = d.deptno
+group by d.dname, d.loc
+order by Average_salary desc
+;
+
+
+
+
+with temp as
+(
+select round(avg(e.sal),2) Average, d.dname, d.loc
+from scott.emp e
+right join scott.dept d 
+on e.deptno = d.deptno
+group by d.dname, d.loc
+order by 1 desc)
+select * from temp
+where AVERAGE is not null
+;
+
+

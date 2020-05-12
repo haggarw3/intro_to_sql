@@ -1,0 +1,89 @@
+-- select *
+-- from scott.emp e
+-- left join scott.dept d 
+-- on e.deptno = d.deptno;
+
+-- select *
+-- from scott.dept;
+
+
+-- select e.empno, e.ename, e.job, e.mgr, e.hiredate, e.sal, 
+-- e.comm, e.deptno, d.dname, d.loc
+-- from scott.emp e
+-- right join scott.dept d 
+-- on e.deptno = d.deptno;
+
+
+select * from oe.orders
+fetch next 4 rows only;
+
+select * from oe.customers;
+-- fetch next 4 rows only;
+
+-- select * from hr.employees
+-- where hr.employees.employee_id = 145;
+
+select * from hr.employees;
+
+-- select * 
+-- from oe.orders o
+-- left join oe.customers c on o.customer_id = c.customer_id
+-- right join hr.employees e on c.account_mgr_id = e.employee_id;
+
+
+
+
+
+-- select * from ad.ad_student_details;
+
+-- select * from ad.ad_parent_information;
+
+-- select * from ad.ad_student_course_details;
+
+-- select * 
+-- from ad.ad_student_details student
+-- left join ad.ad_parent_information parent
+-- on student.parent_id = parent.parent_id
+-- left join ad.ad_student_course_details courses
+-- on student.student_id = courses.student_id;
+
+-- select student.student_id, student.first_name, parent.parent_id, courses.course_id
+-- from ad.ad_student_details student
+-- left join ad.ad_parent_information parent
+-- on student.parent_id = parent.parent_id
+-- left join ad.ad_student_course_details courses
+-- on student.student_id = courses.student_id;
+
+
+
+-- select student.student_id, student.first_name, parent.parent_id, count(courses.course_id)
+-- from ad.ad_student_details student
+-- left join ad.ad_parent_information parent
+-- on student.parent_id = parent.parent_id
+-- left join ad.ad_student_course_details courses
+-- on student.student_id = courses.student_id
+-- group by student.student_id, student.first_name, parent.parent_id;
+
+
+-- select student.student_id, student.first_name, parent.parent_id, count(courses.course_id)
+-- from ad.ad_student_details student
+-- left join ad.ad_parent_information parent
+-- on student.parent_id = parent.parent_id
+-- left join ad.ad_student_course_details courses
+-- on student.student_id = courses.student_id
+-- where student.student_id in (710, 720, 730) and parent.parent_id in (600,630)
+-- group by student.student_id, student.first_name, parent.parent_id
+-- ;
+
+-- select student.student_id, student.first_name, parent.parent_id, count(courses.course_id)
+-- from ad.ad_student_details student
+-- left join ad.ad_parent_information parent
+-- on student.parent_id = parent.parent_id
+-- left join ad.ad_student_course_details courses
+-- on student.student_id = courses.student_id
+-- where student.student_id in (710, 720, 730)
+-- group by student.student_id, student.first_name, parent.parent_id
+-- having count(courses.course_id) >2
+-- order by student.student_id
+-- ;
+

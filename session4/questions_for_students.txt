@@ -1,1 +1,17 @@
 
+
+1. Use the employee table from Scott schema to find all the employees that have a manager 
+
+2. Arrange the employees list in a descending order of their salaries and find the top 3 employee with the highest salaries. Use fetch next 3 rows only command for this
+
+3. Using the previous query, find the employee with the 5th highest salary in the company. 
+Use offset keyword along with fetch 
+
+4. Write a query to join the emp table and dept table from Scott schema. 
+Find the average salary for each department, and also provide the city where that
+Department is located. Arrange the data in a descending order of the average values. 
+Round the average by two decimal places
+
+
+5 Use the same query as above and filter only the data where the average value is not null. You can use a common table expression for this question
+

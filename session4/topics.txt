@@ -1,9 +1,0 @@
-Subqueries :
-
-Self contained sub queries 
-Correlated sub queries 
-EXISTS clause
-
-Derived Tables 
-Views
-
