@@ -1,0 +1,20 @@
+
+Select * from Scott.emp
+fetch next 20 rows only;
+
+select *
+from scott.emp e
+where e.mgr is not null
+order by e.sal desc
+fetch next 3 rows only;
+
+
+Declare 
+A number := 10;
+B number :=5;
+C number;
+
+Begin
+dbms_output.put_line('The difference is: ' || c)
+End;
+/

@@ -1,1 +1,10 @@
 
+
+1. Use EMP and DEPT schema. Display the top 20 rows In the employee table. Use the schema name "scott"
+
+2. Use the employee table from Scott schema to find all the employees that have a manager. You can use "is not null" condition in the where clause for this
+
+3. Declare two integers a and b with some values; use another variable c to store the difference between the a and b, and print the value of c
+
+
+
