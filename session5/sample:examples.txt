@@ -1,0 +1,61 @@
+-- select * from world.world_population;
+-- select w.country, w.country_code, w.indicator_code, w."1960"  
+-- -- from world.world_population w;
+-- begin
+--   dbms_output.put_line('hello world');
+-- end;
+-- /
+
+-- declare 
+-- name char(20) := 'Himanshu';
+-- begin
+--   dbms_output.put_line('Name is:'|| name);
+-- end;
+-- /
+
+-- declare 
+-- first_name char(20) := 'Jack';
+-- last_name char(20) := 'Wilson';
+-- age integer := 30;
+-- marks1 real := 89.0;
+-- marks2 real := 89.0;
+-- marks3 real := 92.5;
+-- marks4 real := 98.0;
+-- average real := (marks1+marks2+marks3+marks4)/4.0;
+
+-- begin
+--   dbms_output.put_line('First Name is:'|| first_name);
+--   dbms_output.put_line('last Name is:'|| last_name);
+--   dbms_output.put_line('Age is:'|| age);
+--   dbms_output.put_line('Average marks are:'|| age);
+-- end;
+-- /
+
+
+
+declare 
+-- sales number(10, 2) := 100;
+-- begin
+-- dbms_output.put_line('Sales Value:' || sales);
+-- end;
+-- /
+
+-- DECLARE 
+--   -- Global variables  
+--   num1 number := 95;  
+--   num2 number := 85;  
+-- BEGIN  
+--   dbms_output.put_line('Outer Variable num1: ' || num1); 
+--   dbms_output.put_line('Outer Variable num2: ' || num2); 
+--   DECLARE  
+--       -- Local variables 
+--       num1 number := 195;  
+--       num2 number := 185;  
+--   BEGIN  
+--       dbms_output.put_line('Inner Variable num1: ' || num1); 
+--       dbms_output.put_line('Inner Variable num2: ' || num2); 
+--   END;  
+-- END; 
+-- / 
+
+

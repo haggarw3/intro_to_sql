@@ -1,0 +1,147 @@
+-- CREATE PROCEDURE greetings 
+-- AS 
+-- BEGIN 
+--   dbms_output.put_line('My first Procedure'); 
+-- END; 
+-- /
+
+-- Execute greetings
+
+-- BEGIN 
+--   greetings; 
+-- END; 
+-- /
+
+-- Drop procedure greetings;
+
+
+
+
+
+
+
+
+
+-- declare 
+-- a number := 10;
+-- b number := 20;
+-- begin
+-- dbms_output.put_line(a+b);
+-- end;
+-- /
+
+
+-- declare 
+-- a number := 10;
+-- b number := 20;
+-- c number;
+
+-- procedure summation(x in number, y in number, z out number) is 
+-- begin
+-- z := x+y;
+-- end;
+
+-- begin
+-- summation(a,b,c);
+-- dbms_output.put_line('Total is: ' || c);
+-- end;
+-- /
+
+
+
+
+
+
+
+
+
+-- DECLARE 
+--   a number; 
+--   b number; 
+--   c number;
+-- PROCEDURE findMin(x IN number, y IN number, z OUT number) IS 
+-- BEGIN 
+--   IF x < y THEN 
+--       z:= x; 
+--   ELSE 
+--       z:= y; 
+--   END IF; 
+-- END;   
+-- BEGIN 
+--   a:= 23; 
+--   b:= 45; 
+--   findMin(a, b, c); 
+--   dbms_output.put_line(' Minimum of (23, 45) : ' || c); 
+-- END; 
+-- /
+
+
+
+
+
+
+-- DECLARE 
+--   a number; 
+-- PROCEDURE squareNum(x IN OUT number) IS 
+-- BEGIN 
+--   x := x * x; 
+-- END;  
+-- BEGIN 
+--   a:= 23; 
+--   squareNum(a); 
+--   dbms_output.put_line(' Square of (23): ' || a); 
+-- END; 
+-- /
+
+
+
+
+
+
+
+
+-- CREATE OR REPLACE FUNCTION totalCustomers 
+-- RETURN number IS 
+--   total number := 0; 
+-- BEGIN 
+--   SELECT count(*) into total 
+--   FROM co.customers; 
+    
+--   RETURN total; 
+-- END; 
+-- /
+
+-- DECLARE 
+--   c number; 
+-- BEGIN 
+--   c := totalCustomers(); 
+--   dbms_output.put_line('Total no. of Customers: ' || c); 
+-- END; 
+-- /
+
+
+
+
+
+-- CREATE OR REPLACE FUNCTION summation (x in number, y in number) 
+-- RETURN number 
+-- IS 
+--   total number; 
+-- BEGIN 
+--   RETURN x+y; 
+-- END; 
+-- /
+
+-- DECLARE 
+-- a number := 10;
+-- b number :=20;
+-- c number; 
+-- BEGIN 
+--   c := summation(a,b); 
+--   dbms_output.put_line('Total no. of Customers: ' || c); 
+-- END; 
+-- /
+
+
+
+
